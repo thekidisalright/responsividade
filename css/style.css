@@ -1,0 +1,441 @@
+:root { /*raiz*/
+    /* Cores do projeto */
+    --primary-color: #0168BA;
+    --secondary-color: #1d1d1f;
+    --contrast-color: #F5f5f7;
+    --placeholder-color: #D9D9D9;
+    --text-highlight-color: #616161;
+
+    --overlay-label-color: rgba(255, 255, 255, 0.6);
+
+    --large-radio-border: 10px;
+    --small-radio-border: 5px;
+
+    --card-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    --header-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+    /* Referencias de Fontes */
+    /* rem ou em */
+
+    /*
+        36px == 2.25 rem
+        32px === 2rem
+        24px === 1.5 rem
+        20px === 1.25rem
+        16px === 1 rem
+        14px === 0,874rem
+        12px === 0.75 rem
+        10px === 0.625rem
+    */
+
+* {
+    font-family: 'Montserrat', sans-serif; /*significa q se a fonte n carregar vai ser sans-serif mesmo*/
+    color: var(--secondary-color);
+}
+
+
+
+.header, .section-header, .footer{
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+}
+
+h1, h2, h3{
+    margin: 0;
+}
+
+.time-artigo{
+    padding-left: 20px;
+}
+
+.navbar {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links{
+    display: none;
+}
+
+.navbar-logo{
+    font-size: 2rem;
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+.navbar-burguer-icon{
+    width: fit-content;
+}
+
+.container{
+    padding-inline: 20px;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.content{
+    margin-block: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.last-post{
+    margin-bottom: 15px;
+}
+/* Hackerzinho 'Cortar para caber' */
+.card figure{
+    margin: 0;
+    position: relative;
+    height: 8px;
+    padding-bottom: 52%;
+    overflow: hidden;
+    border-radius: var(--large-radio-border);
+}
+
+.galeria{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+}
+
+.galeria div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.galeria div:hover{
+    flex: 5;
+}
+
+.card .card-image{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.card-big .card-label{
+    position: absolute;
+    bottom: 0;
+    padding: 20px 5%; /* % GERA RESPONSIVIDADE pq segue o tamanho da imagem em 5%*/
+    font-size: 0.875rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.978203781512605) 25%, rgba(255,255,255,1) 100%);
+    /* background-color: var(--overlay-label-color); Pra imagem ser vista */
+    width: 90%;
+    opacity: 0.4;
+    transition: all .5s;
+}
+
+.card-big .card-label:hover{
+    opacity: 0.9;
+}
+
+.card-big .card-label h3{
+    font-size: 1.5rem;
+}
+
+.text{
+    margin: 30px, 30px;
+}
+
+.section-header{
+    border-radius: var(--small-radio-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5px; /*Os dois lados*/
+    height: 28px;
+    margin-bottom: 15px;
+}
+
+.section-header h2{
+    font-size: 0.875rem;
+    color: var(--contrast-color)
+}
+
+.section-header a{
+    font-size: 0.625rem;
+    color: var(--contrast-color)
+}
+
+.section-header-link{
+    justify-content: space-between;
+}
+
+.card-medium {
+    box-shadow: var(--card-shadow);
+    border-radius: var(--large-radio-border);
+}
+
+.card-medium .card-label{
+    font-size: 0.875rem;
+    padding: 12px 12px 40px 12px;
+}
+
+.card-medium .card-label h3{
+    font-size: 1.25rem;
+}
+
+.card-medium .card-label p{
+    margin-block: 10px;
+}
+
+.card-medium .card-category{
+    color: var(--primary-color);
+}
+
+.card-medium .card-author,
+.card-medium time{
+    color: var(--text-highlight-color);
+}
+
+.all-posts-grid{
+    display: grid;
+    gap: 16px;
+}
+
+.popular-posts,
+.categories{
+    display: none;
+}
+
+.footer,
+.footer .container,
+.footer span{
+    height: 48px;
+    font-weight: 600;
+    color: var(--contrast-color);
+}
+
+.footer span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-links{
+    list-style: none;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.navbar-links
+li
+a{
+    font-weight: 600;
+    color: var(--contrast-color);
+    text-decoration: none;
+}
+
+.card-small{
+    box-shadow: var(--card-shadow);
+    background-color: var(--contrast-color);
+    border-radius: var(--large-radio-border);
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+.card-small
+figure{
+    width: 115px;
+    height: 54px;
+    padding: 0;
+}
+
+.card-small
+h3{
+    font-size: 0.875rem;
+}
+
+.card-small
+time{
+    font-size: 0.75rem;
+}
+
+.popular-posts-box{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-small:last-child{
+    display: none;
+}
+
+.categories-list{
+    /* list-style: "❤ "; */
+    padding: 0;
+    font-weight: 600;
+}
+
+.categories-list
+.list-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories-list
+.list-item
+label::before{
+    content: "📖 ";
+
+}
+
+.navbar-links
+li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+/* Usar o media apenas para alterações */
+@media screen and (min-width: 768px){
+
+/*ALTERACAO FONTES*/
+    .container{
+        padding-inline: 40px;
+    }
+
+    .content{
+        padding-block: 20px;
+    }
+
+    .last-post,
+    .section-header{
+        margin-bottom: 20px;
+    }
+
+    .section-header{
+        border-radius: var(--large-radio-border);
+        height: 48px;
+        padding-inline: 22px;
+    }
+
+    .navbar-logo{
+        font-size: 2.25rem;
+    }
+
+    .card-big .card-label{
+        font-size: 1rem;
+    }
+
+    .card-big .card-label h3{
+        font-size: 2rem;
+    }
+
+    .section-header h2{
+        font-size: 1.25rem;
+    }
+
+    .section-header a{
+        font-size: 0.875rem;
+    }
+
+/*ALTERACAO Grid*/
+
+    .all-posts-grid{
+        grid-template-columns: repeat(2, 1fr); /*1fr unidade de medida especial (um elemento) | quebra em 2 colunas*/
+        
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+
+/*ALTERACAO Grid*/
+
+    .last-post{
+        grid-area: lp; /*apenas dando nome*/
+    }
+
+    .all-posts{
+        grid-area: ap;
+    }
+
+    .popular-posts{
+        grid-area: pp;
+        display: block;
+    }
+
+    .categories{
+        grid-area: ct;
+        display: block;
+    }
+
+    .content .container{
+        display: grid;
+        column-gap: 16px;
+        grid-template-areas:
+            "lp pp"
+            "ap ct";
+    }
+    
+    .navbar-burguer-icon{
+        display: none;
+    }
+
+    .navbar-links{
+        display: flex;
+    }
+
+    .content{
+        padding-block: 26px;
+    }
+    
+    .last-post,
+    .section-header{
+        margin-bottom: 24px;
+    }
+    
+    .navbar-links
+    li.active,
+    .navbar-links
+    li:hover:not(:last-child){
+        background-color: var(--contrast-color);
+        border-radius: var(--large-radio-border) var(--large-radio-border) 0 0;
+    }
+
+    .navbar-links
+    li.active
+    a,
+    .navbar-links
+    li:hover
+    a{
+        color: var(--secondary-color);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .content{
+        padding-block: 50px;
+    }
+
+    .all-posts-grid{
+        gap: 24px;
+    }
+
+    .card-small:last-child{
+        display: flex;
+    }
+
+    .card-small
+    figure{
+        width: 120px;
+        height: 64px;
+    }
+}
