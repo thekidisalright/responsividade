@@ -6,8 +6,12 @@
   <meta name="keywords" content="Livros, fantasia, artigo, atividade, ficção, leitura">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="script" href="js/script.js">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile_menu.css">
+  
   <title>Home - Booklire</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="mobile-menu" id="body">
   <header class="header">
     <div class="container">
       <nav class="navbar">
@@ -23,7 +27,18 @@
         <ul class="navbar-links">
           <li> <a href="index.html" class="navbar-link">Home</a> </li>
           <li> <a href="articles.html" class="navbar-link">Artigos</a> </li>
-          <li class="navbar-search"><img src="images/icons/search-white.svg" alt="Buscar"></li>
+          <li class="navbar-close">
+            <img class="navbar-close-icon" src="images/icons/close.svg" alt="Fechar">
+          </li>
+          <li class="navbar-search">
+            <form class="navbar-search-bar">
+              <input type="text" class="search-bar-input" placeholder="Buscar...">
+              <button class="search-bar-button">
+                <img src="images/icons/search.svg" alt="" class="search-bar-icon">
+              </button>
+            </form>
+          </li>
+          <li class="navbar-search"><img class="navbar-search-icon" src="images/icons/search-white.svg" alt="Buscar"></li>
         </ul>
         <img class="navbar-burguer-icon" src="images/icons/burger.svg" alt="Menu">
       </nav>
@@ -190,5 +205,7 @@
       <span>Copyright © Alexandre Silva</span>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
