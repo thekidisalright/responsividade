@@ -1,19 +1,4 @@
-:root { /*raiz*/
-    /* Cores do projeto */
-    --primary-color: #0168BA;
-    --secondary-color: #1d1d1f;
-    --contrast-color: #F5f5f7;
-    --placeholder-color: #D9D9D9;
-    --text-highlight-color: #616161;
 
-    --overlay-label-color: rgba(255, 255, 255, 0.6);
-
-    --large-radio-border: 10px;
-    --small-radio-border: 5px;
-
-    --card-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    --header-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-}
     /* Referencias de Fontes */
     /* rem ou em */
 
@@ -65,7 +50,7 @@ h1, h2, h3{
     text-decoration: none;
 }
 
-.navbar-burguer-icon{
+.navbar-burger-icon{
     width: fit-content;
 }
 
@@ -284,6 +269,40 @@ li{
     transition: all .4s;
 }
 
+.navbar-search-bar{
+    display: none;
+    width: 320px;
+    position: relative;
+}
+
+.search-bar-input{
+    width: 100%;
+    background-color: var(--placeholder-color);
+    border: none;
+    outline: none;
+    padding-inline: 10px;
+    height: 46px;
+    border-radius: var(--large-radio-border) 0 0 var(--large-radio-border);
+    color: var(--text-highlight-color);
+}
+
+.search-bar-input:focus{
+    color: var(--secondary-color);
+}
+
+.search-bar-button{
+    height: 48px;
+    width: 40px;
+    background-color: var(--primary-color);
+    padding-inline: 10px;
+    border-radius: 0 var(--large-radio-border) var(--large-radio-border) 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
 /* Usar o media apenas para alterações */
 @media screen and (min-width: 768px){
 
@@ -370,7 +389,7 @@ li{
             "ap ct";
     }
     
-    .navbar-burguer-icon{
+    .navbar-burger-icon{
         display: none;
     }
 
