@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const closeIcon = document.querySelector('.navbar-close-icon');
     const burgerIcon = document.querySelector('.navbar-burger-icon');
     const body = document.querySelector('#body');
+    body.classList.remove('mobile-menu')
     function removeClass() {
         body.classList.remove('mobile-menu');
         closeIcon.style.display = 'none';
