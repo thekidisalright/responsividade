@@ -1,15 +1,46 @@
+const posts = [
+    {
+        pagetitle: 'Blade Runner - Booklire',
 
-    const post = {
-    pagetitle: 'Blade Runner - Booklire',
+        titulo:'Blade Runner - Philip K. Dick', 
 
-    titulo:'Blade Runner - Philip K. Dick', 
+        author:' Alexandre Silva',
 
-    author:' Alexandre Silva',
+        date:'5 de maio de 2023',
 
-    date:'5 de maio de 2023',
+        datetime:'2023-05-05',
 
-    content:'<p>Androides Sonham com Ovelhas Elétricas?, ou Blade Runner, é um romance de ficção científica escrito por Philip K. Dick e publicado em 1968. A história se passa em um futuro pós-apocalíptico, onde a Terra está em ruínas após uma guerra nuclear, e grande parte da população emigrou para outros planetas. Aqueles que permaneceram na Terra vivem em um ambiente decadente e desolado.</p><p>O livro acompanha o protagonista Rick Deckard, um caçador de recompensas que tem como missão aposentar androides fugitivos, conhecidos como replicantes. Nessa sociedade distópica, os androides são criados para serem praticamente indistinguíveis dos seres humanos, exceto por sua falta de empatia e capacidade emocional. Deckard enfrenta dilemas éticos ao questionar a linha tênue que separa a humanidade dos replicantes.</p><p>Uma das questões centrais do livro é a reflexão sobre a natureza da identidade e da humanidade. Dick explora a ideia de que a empatia, a capacidade de sentir e compartilhar as emoções dos outros, é o que realmente define a humanidade. Os replicantes, embora sejam feitos de matéria orgânica, carecem dessa qualidade essencial.</p><p>Além disso, a obra aborda temas como a solidão, a busca por significado e a natureza da realidade. O protagonista, Deckard, vive em uma sociedade distópica onde a posse de animais reais é um sinal de status, enquanto animais artificiais são usados como substitutos. Ele próprio possui uma ovelha elétrica, mas almeja ter uma ovelha real para restaurar sua conexão com a natureza e com a autenticidade.</p><p>"Androides Sonham com Ovelhas Elétricas?" é conhecido por sua narrativa complexa, cheia de camadas de realidade e questionamentos filosóficos. A obra foi a inspiração principal para o filme "Blade Runner", dirigido por Ridley Scott, que ampliou ainda mais o impacto e a influência do livro.</p><p>Em suma, o livro de Philip K. Dick é uma obra-prima da ficção científica que mergulha em questões profundas sobre o que significa ser humano. Com sua prosa cativante e seu olhar crítico para a sociedade e a natureza da existência, "Androides Sonham com Ovelhas Elétricas?" continua a desafiar e fascinar os leitores até os dias de hoje.</p>',
-};
+        artigo:'<p>"Blade Runner" é um romance de ficção científica escrito por Philip K. Dick e publicado em 1968. A história se passa em um futuro distópico, em 1992 (posteriormente alterado para 2021), onde a Terra é habitada por humanos e androides chamados de "replicantes". Esses replicantes são criados para serem servos e trabalhadores, mas alguns deles rebelam-se e fogem para a Terra, tornando-se ilegais.</p><p>O protagonista do livro é Rick Deckard, um "blade runner", um caçador de recompensas especializado em perseguir e "aposentar" replicantes fugitivos. Deckard é enviado para caçar um grupo de seis replicantes extremamente perigosos que estão escondidos em Los Angeles.</p><p>À medida que Deckard rastreia os replicantes, ele começa a questionar sua própria humanidade e a natureza da realidade. Ele enfrenta dilemas éticos e morais, pois os replicantes demonstram uma gama complexa de emoções e desejos, desafiando a noção de que apenas humanos são capazes de possuí-los.</p><p>Ao longo da narrativa, Deckard se envolve emocionalmente com Rachael, uma replicante que é inicialmente apresentada como humana. Essa relação desafia ainda mais sua compreensão do que é ser humano e levanta questões sobre a natureza da identidade e da alma.</p><p>"Blade Runner" aborda temas como a busca pela identidade, a relação entre humanos e máquinas, a natureza da realidade e a ética da criação de seres artificiais. O livro explora a distinção cada vez mais tênue entre humanos e replicantes, convidando os leitores a questionar o que realmente define a humanidade.</p>'
+    },
+    {
+        pagetitle: 'Blade Runner - Booklire',
 
-const mudartitulo = document.querySelector('.bladetitle');
-mudartitulo.innerText = post.titulo;
+        titulo:'Blade Runner - Philip K. Dick', 
+
+        author:' Alexandre Silva',
+
+        date:'5 de maio de 2023',
+
+        datetime:'2023-05-05',
+
+        artigo:''
+    }
+];
+
+var x;
+const pagetitle = document.querySelector('title');
+const titulo = document.querySelector('.titulo');
+const author = document.querySelector('.author');
+const date = document.querySelector('.date');
+const artigo = document.querySelector('.artigo');
+
+
+if (document.URL.includes('blade-runner')){
+    x = 0;
+    pagetitle.textContent = posts[0].pagetitle;
+    titulo.textContent = posts[0].titulo;
+    author.insertAdjacentHTML('beforeend', posts[0].author);
+    date.textContent = posts[0].date;
+    date.setAttribute('datetime', posts[0].datetime);
+    artigo.innerHTML = posts[0].artigo;
+}
