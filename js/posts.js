@@ -49,13 +49,11 @@ else if (document.URL.includes('carrie')){
     x = 5;
 }
 
-
 const pagetitle = document.querySelector('title');
 const titulo = document.querySelector('.titulo');
 const author = document.querySelector('.author');
 const date = document.querySelector('.date');
 const artigo = document.querySelector('.artigo');
-
 
 pagetitle.textContent = posts[x].pagetitle;
 titulo.textContent = posts[x].titulo;
