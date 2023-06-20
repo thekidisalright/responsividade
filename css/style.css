@@ -18,6 +18,10 @@
     color: var(--secondary-color);
 }
 
+.navbar-close-icon {
+    display: none;
+}
+
 
 
 .header, .section-header, .footer{
@@ -421,6 +425,10 @@ li{
     li:hover
     a{
         color: var(--secondary-color);
+    }
+
+    .navbar-close{
+        display: none !important;
     }
 }
 

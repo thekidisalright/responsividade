@@ -113,3 +113,13 @@ h2{
         font-size: 2.25rem;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .navbar-close{
+        display: none;
+    }
+
+    .navbar-burger-icon{
+        display: none;
+    }
+}
