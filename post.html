@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alexandre Silva">
+  <meta name="keywords" content="Livros, fantasia, artigo, atividade, ficção, leitura">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="script" href="js/script.js">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile_menu.css">
+
+  <title>titulo pagina</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    <header class="header">
+        <div class="container">
+          <nav class="navbar">
+            <h1> <a href="index.html" class="navbar-logo">Booklire</a> </h1>
+            <ul class="navbar-links">
+              <li> <a href="index.html" class="navbar-link">Home</a> </li>
+              <li> <a href="articles.html" class="navbar-link">Artigos</a> </li>
+              <li class="navbar-search"><img src="images/icons/search-white.svg" alt="Buscar"></li>
+            </ul>
+            <img class="navbar-burger-icon" src="images/icons/burger.svg" alt="Menu">
+          </nav>
+        </div>
+      </header>
+    
+      <main class="content">
+        <div class="container">
+          <section class="last-post">
+            <header class="section-header">
+                <h2 class="titulo">titulo</h2>
+            </header>
+            <span class="card-author author"><strong>Por</strong>autor</span>
+            <time class="time-artigo date" datetime="2023-05-10">data</time>
+            <p class="artigo">
+                artigo
+            </p>
+          </section>
+
+      
+
+      <aside class="popular-posts"> <!-- fica ao lado -->
+        <header class="section-header">
+          <h2>Posts Populares</h2>
+        </header>
+        <main class="popular-posts-box">
+          
+          <article class="card card-small itsk">
+            <figure>
+              <a href="it-sk.html"><img class="card-image" src="images/it-sk.jpg" alt="It A Coisa"></a>
+            </figure>
+            <figcaption class="card-label"> <!-- legenda da figura -->
+              <a href="it-sk.html"><h3>It, A Coisa</h3></a>
+              <time datetime="2023-05-08">08 de maio de 2023</time>
+            </figcaption>
+          </article>
+          
+          <article class="card card-small got">
+            <figure>
+              <a href="got.html"><img class="card-image" src="images/got.jpg" alt="A Guerra Dos Tronos"></a>
+            </figure>
+            <figcaption class="card-label"> <!-- legenda da figura -->
+              <a href="got.html"><h3>A Guerra Dos Tronos</h3></a>
+              <time datetime="2023-05-06">06 de maio de 2023</time>
+            </figcaption>
+          </article>
+          
+          <article class="card card-small bladerunner">
+            <figure>
+              <a href="blade-runner.html"><img class="card-image" src="images/blade-runner.jpg" alt="Blade Runner"></a>
+            </figure>
+            <figcaption class="card-label"> <!-- legenda da figura -->
+              <a href="blade-runner.html"><h3>Blade Runner</h3></a>
+              <time datetime="2023-05-05">05 de maio de 2023</time>
+            </figcaption>
+          </article>
+          
+          <article class="card card-small carrie">
+            <figure>
+              <a href="carrie.html"><img class="card-image" src="images/carrie.jpg" alt="Carrie A Estranha"></a>
+            </figure>
+            <figcaption class="card-label"> <!-- legenda da figura -->
+              <a href="carrie.html"><h3>Carrie, A Estranha</h3></a>
+              <time datetime="2023-05-10">10 de maio de 2023</time>
+            </figcaption>
+          </article>
+          
+        </main>
+      </aside>
+
+      <aside class="categories">
+        <header class="section-header">
+          <h2>Categorias</h2>
+        </header>
+        <main>
+          <ol class="categories-list">
+            <li class="list-item">
+              <label>Stephen King</label>
+              <span>(2)</span>
+            </li>
+            <li class="list-item">
+              <label>Rick Riordan</label>
+              <span>(1)</span>
+            </li>
+            <li class="list-item">
+              <label>George R. R. Martin</label>
+              <span>(2)</span>
+            </li>
+            <li class="list-item">
+              <label>Philip K. Dick</label>
+              <span>(1)</span>
+            </li>
+          </ol>
+        </main>
+      </aside>
+
+    </div>
+  </main>
+
+</body>
+
+</html>
