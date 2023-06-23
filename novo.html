@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Mudança de Vetor</title>
+    <style>
+        .titulo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .autor {
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .subtitulo {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Mudança de Vetor</h1>
+    <button id="btn1">Vetor 1</button>
+    <button id="btn2">Vetor 2</button>
+    <div>
+        <h2 class="titulo"></h2>
+        <p class="autor"></p>
+        <p class="subtitulo"></p>
+    </div>
+
+    <script>
+        const vetor1 = {
+            id: 1,
+            titulo: 'Título Vetor 1',
+            autor: 'Autor Vetor 1',
+            subtitulo: 'Subtítulo Vetor 1'
+        };
+
+        const vetor2 = {
+            id: 2,
+            titulo: 'Título Vetor 2',
+            autor: 'Autor Vetor 2',
+            subtitulo: 'Subtítulo Vetor 2'
+        };
+
+        const btn1 = document.querySelector("#btn1");
+        const btn2 = document.querySelector("#btn2");
+        const tituloElement = document.querySelector(".titulo");
+        const autorElement = document.querySelector(".autor");
+        const subtituloElement = document.querySelector(".subtitulo");
+
+        // Função para atualizar os elementos da página com base no vetor selecionado
+        function mudarVetor(vetor) {
+            tituloElement.innerText = vetor.titulo;
+            autorElement.innerText = `Autor: ${vetor.autor}`;
+            subtituloElement.innerText = vetor.subtitulo;
+        }
+
+        // Event Listeners para os botões
+        btn1.addEventListener("click", function() {
+            mudarVetor(vetor1);
+        });
+
+        btn2.addEventListener("click", function() {
+            mudarVetor(vetor2);
+        });
+    </script>
+</body>
+</html>
