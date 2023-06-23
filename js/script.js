@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', function(){
         closeIcon.addEventListener('click', removeClass);
         burgerIcon.addEventListener('click', addClass);
 
-
-    
 });
     
 
